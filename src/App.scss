@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
 // Colors
 $clr-primary-blue: #5175FF;
 $clr-secondary-blue: #829CFF;
@@ -5,3 +7,7 @@ $clr-primary-dark: #333950;
 $clr-secondary-dark: #25293A;
 $clr-gray: #747B95;
 $clr-red: #F05B5B;
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
