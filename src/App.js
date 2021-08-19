@@ -37,7 +37,9 @@ function App() {
               <p>2 gb storage</p>
               <p>Great security and support</p>
             </div>
-            <button type="button">Try for Free</button>
+            <button className="btn btn-lightblue" type="button">
+              Try for Free
+            </button>
           </div>
 
           <div className="price-card">
@@ -51,7 +53,9 @@ function App() {
               <p>50 gb storage</p>
               <p>More control and insights</p>
             </div>
-            <button type="button">Try for Free</button>
+            <button className="btn btn-light" type="button">
+              Try for Free
+            </button>
           </div>
 
           <div className="price-card">
@@ -65,7 +69,9 @@ function App() {
               <p>100 gb storage</p>
               <p>VIP support</p>
             </div>
-            <button type="button">Try for Free</button>
+            <button className="btn btn-lightblue" type="button">
+              Try for Free
+            </button>
           </div>
         </section>
 

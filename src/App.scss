@@ -46,6 +46,7 @@ body {
   margin: 0;
   color: $clr-gray;
   font-size: 1rem;
+  background-color: #F2F2F2;
 }
 
 main {
@@ -56,6 +57,8 @@ main {
 img {
   width: 100%;
 }
+
+// Header
 
 header {
   display: flex;
@@ -68,6 +71,9 @@ header {
 header img {
   width: 155px;
 }
+
+
+// Hero 
 
 .hero-image {
   display: flex;
@@ -130,6 +136,43 @@ header img {
 
 .btn-lightblue {
   color: $clr-primary-blue;
-  background: $clr-secondary-blue;
+  // background: $clr-secondary-blue;
 }
 
+
+// Pricing
+
+.price-card {
+  padding: 2em 0;
+  margin: 6em 0;
+  background: white;
+  box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
+  border-radius: 13px;
+  text-align: center;
+
+  .tier {
+    color: $clr-primary-dark;
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.75rem;
+  }
+
+  .price {
+    color: $clr-primary-dark;
+    margin-bottom: 3.5rem;
+    h2 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      line-height: 4rem;
+      margin-bottom: 0;
+    }
+    p {
+      line-height: 1.75rem;
+    }
+  }
+  
+  .btn {
+    margin-top: 1.75rem;
+    margin-bottom: .5rem;
+  }
+}
