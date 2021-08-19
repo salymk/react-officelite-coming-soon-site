@@ -7,7 +7,113 @@ $clr-primary-dark: #333950;
 $clr-secondary-dark: #25293A;
 $clr-gray: #747B95;
 $clr-red: #F05B5B;
+$clr-white: #FFFFFF;
+
+// Utilities taken from tailwindcss for setting the maximum width of an element
+$max-w-0: 0rem;
+$max-w-none: none;
+$max-w-xs: 20rem;
+$max-w-sm: 24rem;
+$max-w-md: 28rem;
+$max-w-lg: 32rem;
+$max-w-xl: 36rem;
+$max-w-2xl: 42rem;
+$max-w-3xl: 48rem;
+$max-w-4xl: 56rem;
+$max-w-5xl: 64rem;
+$max-w-6xl: 72rem;
+$max-w-7xl: 80rem;
+$max-w-full: 100%;
+$max-w-min: min-content;
+$max-w-max: max-content;
+$max-w-prose: 65ch;
+$max-w-screen-sm: 640px;
+$max-w-screen-md: 768px;
+$max-w-screen-lg: 1024px;
+$max-w-screen-xl: 1280px;
+$max-w-screen-2xl: 1536px;
+
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
+  margin: 0;
+  color: $clr-gray;
+  font-size: 1rem;
+}
+
+main {
+  max-width: $max-w-full;
+  padding: 1.625rem;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3em 0;
+
+}
+
+header img {
+  width: 155px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+
+  img {
+    width: 171px;
+  }
+}
+
+.bg-hero-pattern {
+  position: absolute;
+  top: -8em;
+  max-width: 500px;
+  left: 0;
+  right: 0;
+}
+
+.hero-content {
+  text-align: center;
+  h1 {
+    color: $clr-primary-dark;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+
+  p {
+    color: $clr-gray;
+    line-height: 1.625rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.btn {
+  padding: 1.3rem 2.5rem;
+  border: none;
+  border-radius: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-hero {
+  color: $clr-white;
+  background: #5175FF;
+  box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
 }
