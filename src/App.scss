@@ -117,3 +117,19 @@ header img {
   background: #5175FF;
   box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
 }
+
+.btn-light {
+  color: $clr-primary-blue;
+  background: $clr-white;
+}
+
+.btn-blue {
+  color: $clr-white;
+  background: $clr-primary-blue;
+}
+
+.btn-lightblue {
+  color: $clr-primary-blue;
+  background: $clr-secondary-blue;
+}
+
