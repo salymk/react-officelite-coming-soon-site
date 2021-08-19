@@ -42,7 +42,7 @@ function App() {
             </button>
           </div>
 
-          <div className="price-card">
+          <div className="price-card price-card-blue">
             <p className="tier">Pro</p>
             <div className="price">
               <h2>$9.99</h2>

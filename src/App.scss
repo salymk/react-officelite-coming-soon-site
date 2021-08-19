@@ -137,6 +137,7 @@ header img {
 .btn-lightblue {
   color: $clr-primary-blue;
   // background: $clr-secondary-blue;
+  background: rgba(81, 117, 255, .15);
 }
 
 
@@ -144,14 +145,14 @@ header img {
 
 .price-card {
   padding: 2em 0;
-  margin: 6em 0;
+  margin: 2em 0;
   background: white;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
   border-radius: 13px;
   text-align: center;
+  color: $clr-primary-dark;
 
   .tier {
-    color: $clr-primary-dark;
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.75rem;
@@ -170,9 +171,30 @@ header img {
       line-height: 1.75rem;
     }
   }
+
+  .features {
+    color: $clr-gray
+  }
   
   .btn {
     margin-top: 1.75rem;
     margin-bottom: .5rem;
   }
+}
+
+.price-card-blue {
+  color: $clr-white;
+  background-color: $clr-primary-blue;
+  background-image: url('./assets/home/bg-pattern-pricing.svg');
+  background-position: bottom;
+
+  .price {
+    color: $clr-white;
+  }
+
+  .features {
+    color: $clr-white;
+    opacity: .75;
+  }
+
 }
