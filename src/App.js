@@ -74,34 +74,33 @@ function App() {
             </button>
           </div>
         </section>
-
-        <section className="footer">
-          <div className="cta">
-            <div className="timer">
-              <p>Coming 4 Nov 2020</p>
-              <div className="timer-container">
-                <div className="day">
-                  <h3>47</h3>
-                  <p>days</p>
-                </div>
-                <div className="hour">
-                  <h3>07</h3>
-                  <p>hours</p>
-                </div>
-                <div className="minutes">
-                  <h3>56</h3>
-                  <p>min</p>
-                </div>
-                <div className="day">
-                  <h3>14</h3>
-                  <p>secs</p>
-                </div>
+      </main>
+      <footer>
+        <div className="cta">
+          <div className="timer">
+            <p>Coming 4 Nov 2020</p>
+            <div className="timer-container">
+              <div className="day">
+                <h3>47</h3>
+                <p>days</p>
+              </div>
+              <div className="hour">
+                <h3>07</h3>
+                <p>hours</p>
+              </div>
+              <div className="minutes">
+                <h3>56</h3>
+                <p>min</p>
+              </div>
+              <div className="day">
+                <h3>14</h3>
+                <p>secs</p>
               </div>
             </div>
-            <button type="button">Get started</button>
           </div>
-        </section>
-      </main>
+          <button type="button">Get started</button>
+        </div>
+      </footer>
     </>
   );
 }

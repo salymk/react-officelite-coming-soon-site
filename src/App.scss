@@ -1,37 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
 
-// Colors
-$clr-primary-blue: #5175FF;
-$clr-secondary-blue: #829CFF;
-$clr-primary-dark: #333950;
-$clr-secondary-dark: #25293A;
-$clr-gray: #747B95;
-$clr-red: #F05B5B;
-$clr-white: #FFFFFF;
 
-// Utilities taken from tailwindcss for setting the maximum width of an element
-$max-w-0: 0rem;
-$max-w-none: none;
-$max-w-xs: 20rem;
-$max-w-sm: 24rem;
-$max-w-md: 28rem;
-$max-w-lg: 32rem;
-$max-w-xl: 36rem;
-$max-w-2xl: 42rem;
-$max-w-3xl: 48rem;
-$max-w-4xl: 56rem;
-$max-w-5xl: 64rem;
-$max-w-6xl: 72rem;
-$max-w-7xl: 80rem;
-$max-w-full: 100%;
-$max-w-min: min-content;
-$max-w-max: max-content;
-$max-w-prose: 65ch;
-$max-w-screen-sm: 640px;
-$max-w-screen-md: 768px;
-$max-w-screen-lg: 1024px;
-$max-w-screen-xl: 1280px;
-$max-w-screen-2xl: 1536px;
+:root {
+  --clr-primary-blue: #5175FF;
+  --clr-secondary-blue: #829CFF;
+  --clr-primary-dark: #333950;
+  --clr-secondary-dark: #25293A;
+  --clr-gray: #747B95;
+  --clr-red: #F05B5B;
+  --clr-white: #FFFFFF;
+  --bg-clr: #FAFAFA;
+
+  --ff-base: 'Kumbh Sans', sans-serif;
+  
+  --fs-100: .75rem; //12px
+  --fs-200: 1rem; //16px
+  --fs-300: 1.125rem; //18px
+  --fs-400: 1.25rem; //20px
+  --fs-500: 2rem; //32px
+  --fs-600: 2.5rem; //40px
+  --fs-700: 3.5rem; //56px
+
+  --fw-400: 400;
+  --fw-500: 700;
+
+  --br-400: 0.875rem;
+  --br-500: 1.75rem;
+
+  --box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
+
+
+  // Utilities taken from tailwindcss for setting the maximum width of an element
+  --max-w-0: 0rem;
+  --max-w-none: none;
+  --max-w-xs: 20rem;
+  --max-w-sm: 24rem;
+  --max-w-md: 28rem;
+  --max-w-lg: 32rem;
+  --max-w-xl: 36rem;
+  --max-w-2xl: 42rem;
+  --max-w-3xl: 48rem;
+  --max-w-4xl: 56rem;
+  --max-w-5xl: 64rem;
+  --max-w-6xl: 72rem;
+  --max-w-7xl: 80rem;
+  --max-w-full: 100%;
+
+  --max-w-min: min-content;
+  --max-w-max: max-content;
+
+  --max-w-prose: 65ch;
+  --max-w-screen-sm: 640px;
+  --max-w-screen-md: 768px;
+  --max-w-screen-lg: 1024px;
+  --max-w-screen-xl: 1280px;
+  --max-w-screen-2xl: 1536px;
+
+}
 
 
 *::before,
@@ -44,13 +69,13 @@ $max-w-screen-2xl: 1536px;
 body {
   font-family: 'Kumbh Sans', sans-serif;
   margin: 0;
-  color: $clr-gray;
+  color: var(--clr-gray);
   font-size: 1rem;
-  background-color: #F2F2F2;
+  background-color: var(--bg-clr);
 }
 
 main {
-  max-width: $max-w-full;
+  max-width: var(--max-w-full);
   padding: 1.625rem;
 }
 
@@ -96,14 +121,14 @@ header img {
 .hero-content {
   text-align: center;
   h1 {
-    color: $clr-primary-dark;
+    color: var(--clr-primary-dark);
     font-weight: bold;
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 
   p {
-    color: $clr-gray;
+    color: var(--clr-gray);
     line-height: 1.625rem;
     margin-bottom: 1.5rem;
   }
@@ -119,38 +144,45 @@ header img {
 }
 
 .btn-hero {
-  color: $clr-white;
-  background: #5175FF;
+  color: var(--clr-white);
+  background: var(--clr-primary-blue);
   box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
 }
 
 .btn-light {
-  color: $clr-primary-blue;
-  background: $clr-white;
+  color: var(--clr-primary-blue);
+  background: var(--clr-white);
 }
 
 .btn-blue {
-  color: $clr-white;
-  background: $clr-primary-blue;
+  color: var(--clr-white);
+  background: var(--clr-primary-blue);
 }
 
 .btn-lightblue {
-  color: $clr-primary-blue;
-  // background: $clr-secondary-blue;
+  color: var(--clr-primary-blue);
   background: rgba(81, 117, 255, .15);
 }
 
 
 // Pricing
 
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .price-card {
+  max-width: var(--max-w-sm);
+  width: 100%;
   padding: 2em 0;
   margin: 2em 0;
   background: white;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
   border-radius: 13px;
   text-align: center;
-  color: $clr-primary-dark;
+  color: var(--clr-primary-dark);
 
   .tier {
     font-size: 1.25rem;
@@ -159,7 +191,7 @@ header img {
   }
 
   .price {
-    color: $clr-primary-dark;
+    color: var(--clr-primary-dark);
     margin-bottom: 3.5rem;
     h2 {
       font-size: 3.5rem;
@@ -173,7 +205,7 @@ header img {
   }
 
   .features {
-    color: $clr-gray
+    color: var(--clr-gray);
   }
   
   .btn {
@@ -183,17 +215,17 @@ header img {
 }
 
 .price-card-blue {
-  color: $clr-white;
-  background-color: $clr-primary-blue;
+  color: var(--clr-white);
+  background-color: var(--clr-primary-blue);
   background-image: url('./assets/home/bg-pattern-pricing.svg');
   background-position: bottom;
 
   .price {
-    color: $clr-white;
+    color: var(--clr-white);
   }
 
   .features {
-    color: $clr-white;
+    color: var(--clr-white);
     opacity: .75;
   }
 
