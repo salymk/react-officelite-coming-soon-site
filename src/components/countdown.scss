@@ -1,0 +1,30 @@
+.countdown {
+    &__title {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: var(--clr-white);
+        font-weight: var(--fw-500);
+  
+        span {
+          color: var(--clr-primary-blue);
+        }
+    }
+
+    &__timer {
+
+        .time {
+            h3 {
+                font-size: var(--fs-500);
+                font-weight: var(--fw-500);
+                line-height: 1;
+                margin: 0;
+            }
+
+            p {
+                font-size: var(--fs-100);
+                color: var(--clr-white);
+                opacity: .5;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/header';
 import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
+import Countdown from './components/countdown';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <img className="bg-hero-pattern" src={bgPatternHeader} alt="" />
           </div>
         </section>
+
         <section className="price">
           <div className="container">
             <div className="card">
@@ -78,30 +80,11 @@ function App() {
             </div>
           </div>
         </section>
+
         <section className="cta">
           <div className="container">
-            <div className="cta-container">
-              <div className="timer">
-                <p>Coming 4 Nov 2020</p>
-                <div className="timer-container">
-                  <div className="day">
-                    <h3>47</h3>
-                    <p>days</p>
-                  </div>
-                  <div className="hour">
-                    <h3>07</h3>
-                    <p>hours</p>
-                  </div>
-                  <div className="minutes">
-                    <h3>56</h3>
-                    <p>min</p>
-                  </div>
-                  <div className="day">
-                    <h3>14</h3>
-                    <p>secs</p>
-                  </div>
-                </div>
-              </div>
+            <div className="timer">
+              <Countdown />
               <button type="button">Get started</button>
             </div>
           </div>
