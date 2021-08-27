@@ -19,6 +19,10 @@
             color: $clr-primary-dark;
             font-size: $fs-600;
         }
+
+        p {
+            line-height: 1.625rem;
+        }
     }
 
     &__btn {
