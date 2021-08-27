@@ -1,0 +1,126 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+  $clr-primary-blue: #5175FF;
+  $clr-secondary-blue: #829CFF;
+  $clr-primary-dark: #333950;
+  $clr-secondary-dark: #25293A;
+  $clr-gray: #747B95;
+  $clr-red: #F05B5B;
+  $clr-white: #FFFFFF;
+  $bg-clr: #FAFAFA;
+
+  $ff-base: 'Kumbh Sans', sans-serif;
+  
+  $fs-100: .75rem; //12px
+  $fs-200: 1rem; //16px
+  $fs-300: 1.125rem; //18px
+  $fs-400: 1.25rem; //20px
+  $fs-500: 2rem; //32px
+  $fs-600: 2.5rem; //40px
+  $fs-700: 3.5rem; //56px
+
+  $fw-400: 400;
+  $fw-500: 700;
+
+  $br-400: 0.875rem;
+  $br-500: 1.75rem;
+
+  $box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
+
+
+  // Utilities taken from tailwindcss for setting the maximum width of an element
+  $max-w-0: 0rem;
+  $max-w-none: none;
+  $max-w-xs: 20rem;
+  $max-w-sm: 24rem;
+  $max-w-md: 28rem;
+  $max-w-lg: 32rem;
+  $max-w-xl: 36rem;
+  $max-w-2xl: 42rem;
+  $max-w-3xl: 48rem;
+  $max-w-4xl: 56rem;
+  $max-w-5xl: 64rem;
+  $max-w-6xl: 72rem;
+  $max-w-7xl: 80rem;
+  $max-w-full: 100%;
+
+  $max-w-min: min-content;
+  $max-w-max: max-content;
+
+  $max-w-prose: 65ch;
+  $max-w-screen-sm: 640px;
+  $max-w-screen-md: 768px;
+  $max-w-screen-lg: 1024px;
+  $max-w-screen-xl: 1280px;
+  $max-w-screen-2xl: 1536px;
+
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
