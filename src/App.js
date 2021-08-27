@@ -11,6 +11,8 @@ function App() {
       <Header />
       <main>
         <section className="hero">
+          <img className="hero__bg-pattern" src={bgPatternHeader} alt="" />
+
           <div className="container">
             <div className="hero__image">
               <img src={ChartsSVG} alt="Stat charts" />
@@ -26,7 +28,7 @@ function App() {
                 Get started
               </button>
             </div>
-            <img className="bg-hero-pattern" src={bgPatternHeader} alt="" />
+            {/* <img className="hero__bg-pattern" src={bgPatternHeader} alt="" /> */}
           </div>
         </section>
 
