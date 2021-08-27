@@ -1,4 +1,5 @@
-import './App.scss';
+// import './App.scss';
+import './scss/main.scss';
 import Header from './components/header';
 import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
