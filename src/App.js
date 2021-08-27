@@ -24,7 +24,7 @@ function App() {
                 projects. Officelite is the new collaboration platform built
                 with an intuitive interface to improve productivity.
               </p>
-              <button className="btn" type="button">
+              <button className="btn hero__btn" type="button">
                 Get started
               </button>
             </div>

@@ -13,10 +13,16 @@
     }
 
     &__content {
+        text-align: center;
+        padding-top: 1rem;
         h1 {
             color: $clr-primary-dark;
             font-size: $fs-600;
         }
+    }
+
+    &__btn {
+        margin-top: 1.5rem;
     }
 
     &__bg-pattern {
