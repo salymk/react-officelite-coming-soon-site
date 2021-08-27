@@ -6,9 +6,24 @@
     padding: 1.3rem 2.5rem;
     border: none;
     border-radius: 1.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: $fw-500;
+    font-size: $fs-200;
     cursor: pointer;
+    transition: ease-in-out .3s;
   }
+
+  .btn--hero {
+    background-color: $clr-primary-blue;
+    color: $clr-white;
+    box-shadow: $box-shadow;
+  }
+
+  .btn--hero:hover {
+    background-color: $clr-secondary-blue;
+  }
+
+
+
+
 
   
