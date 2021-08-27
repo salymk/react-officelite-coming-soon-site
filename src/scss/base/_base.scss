@@ -6,7 +6,7 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+
   color: $clr-primary-blue;
 }
 
@@ -19,14 +19,26 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-/**
- * Basic styles for links
- */
+img {
+  width: 100%;
+}
 
- h2 {
-   color: $clr-primary-blue;
- }
+h1 {
+  font-size: $fs-600;
+  line-height: 1.4;
+
+}
+
+h2 {
+  font-size: $fs-700;
+}
+
+h3 {
+  font-size: $fs-500;
+}
+
+
 

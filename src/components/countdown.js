@@ -1,5 +1,4 @@
 import React from 'react';
-import './countdown.scss';
 
 const Countdown = () => (
   <>

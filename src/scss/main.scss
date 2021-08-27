@@ -20,11 +20,13 @@
 // 4. Layout-related sections
 @import
   'layout/header',
+  'layout/hero',
   'layout/footer';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/countdown';
 
 // 6. Page-specific styles
 @import
