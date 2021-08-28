@@ -12,13 +12,13 @@
     transition: ease-in-out .3s;
   }
 
-  .btn--hero {
+  .btn--primary {
     background-color: $clr-primary-blue;
     color: $clr-white;
     box-shadow: $box-shadow;
   }
 
-  .btn--hero:hover {
+  .btn--primary:hover {
     background-color: $clr-secondary-blue;
   }
 
