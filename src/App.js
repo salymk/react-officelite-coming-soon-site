@@ -12,6 +12,18 @@ const freeFeatures = [
   'Great security and support',
 ];
 
+const proFeatures = [
+  'All essential integrations',
+  '50 gb storage',
+  'More control and insights',
+];
+
+const ultimateFeatures = [
+  'Robust work management',
+  '100 gb storage',
+  'VIP support',
+];
+
 function App() {
   return (
     <>
