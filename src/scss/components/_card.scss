@@ -46,6 +46,8 @@
   .card--blue {
       color: $clr-white;
       background-color: $clr-primary-blue;
+      background-image: url(../../assets/home/bg-pattern-pricing.svg);
+      background-position: bottom;
 
       .card__price {
           h2 {
