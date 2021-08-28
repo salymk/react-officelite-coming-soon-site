@@ -53,45 +53,33 @@ function App() {
 
         <section className="price">
           <div className="container">
-            <Card
-              cardClassName="card--light"
-              tier="Basic"
-              price="Free"
-              users="Upto 5 users for free"
-              features={freeFeatures}
-              cta="Try for Free"
-            />
+            <div className="cards">
+              <Card
+                cardClassName="card--light"
+                tier="Basic"
+                price="Free"
+                users="Upto 5 users for free"
+                features={freeFeatures}
+                cta="Try for Free"
+              />
 
-            <div className="card card--blue">
-              <p className="card__tier">Pro</p>
-              <div className="card__price">
-                <h2>$9.99</h2>
-                <p>Per user, billed monthly</p>
-              </div>
-              <div className="card__features">
-                <p>All essential integration</p>
-                <p>50 gb storage</p>
-                <p>More control and insights</p>
-              </div>
-              <button className="btn" type="button">
-                Try for Free
-              </button>
-            </div>
+              <Card
+                cardClassName="card--blue"
+                tier="Pro"
+                price="$9.99"
+                users="Per user, billed monthly"
+                features={proFeatures}
+                cta="Try for Free"
+              />
 
-            <div className="card card--light">
-              <p className="card__tier">Ultimate</p>
-              <div className="card__price">
-                <h2>$19.99</h2>
-                <p>Per user, billed monthly</p>
-              </div>
-              <div className="card__features">
-                <p>Robust work management</p>
-                <p>100 gb storage</p>
-                <p>VIP support</p>
-              </div>
-              <button className="btn" type="button">
-                Try for Free
-              </button>
+              <Card
+                cardClassName="card--light"
+                tier="Ultimate"
+                price="$19.99"
+                users="Per user, billed monthly"
+                features={ultimateFeatures}
+                cta="Try for Free"
+              />
             </div>
           </div>
         </section>
