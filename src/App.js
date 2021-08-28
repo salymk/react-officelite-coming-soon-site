@@ -4,6 +4,13 @@ import Header from './components/header';
 import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
 import Countdown from './components/countdown';
+import Card from './components/card';
+
+const freeFeatures = [
+  'Basic document collaboration',
+  '2 gb storage',
+  'Great security and support',
+];
 
 function App() {
   return (
@@ -34,21 +41,14 @@ function App() {
 
         <section className="price">
           <div className="container">
-            <div className="card card--light">
-              <p className="card__tier">Basic</p>
-              <div className="card__price">
-                <h2>Free</h2>
-                <p>Up to npm user for free</p>
-              </div>
-              <div className="card__features">
-                <p>Basic document collaboration</p>
-                <p>2 gb storage</p>
-                <p>Great security and support</p>
-              </div>
-              <button className="btn" type="button">
-                Try for Free
-              </button>
-            </div>
+            <Card
+              cardClassName="card--light"
+              tier="Basic"
+              price="Free"
+              users="Upto 5 users for free"
+              features={freeFeatures}
+              cta="Try for Free"
+            />
 
             <div className="card card--blue">
               <p className="card__tier">Pro</p>
