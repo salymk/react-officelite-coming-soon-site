@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import Button from './button';
 
 const Card = (props) => (
   <div className={`card ${props.cardClassName}`}>
@@ -14,9 +15,7 @@ const Card = (props) => (
         <p>{feature}</p>
       ))}
     </div>
-    <button className="btn" type="button">
-      {props.cta}
-    </button>
+    <Button description={props.cta} />
   </div>
 );
 
