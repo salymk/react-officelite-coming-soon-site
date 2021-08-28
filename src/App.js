@@ -34,7 +34,7 @@ function App() {
 
         <section className="price">
           <div className="container">
-            <div className="card">
+            <div className="card card--light">
               <p className="card__tier">Basic</p>
               <div className="card__price">
                 <h2>Free</h2>
@@ -50,7 +50,7 @@ function App() {
               </button>
             </div>
 
-            <div className="card">
+            <div className="card card--blue">
               <p className="card__tier">Pro</p>
               <div className="card__price">
                 <h2>$9.99</h2>
@@ -66,7 +66,7 @@ function App() {
               </button>
             </div>
 
-            <div className="card">
+            <div className="card card--light">
               <p className="card__tier">Ultimate</p>
               <div className="card__price">
                 <h2>$19.99</h2>
