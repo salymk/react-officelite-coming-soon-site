@@ -5,6 +5,7 @@ import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
 import Countdown from './components/countdown';
 import Card from './components/card';
+import Button from './components/button';
 
 const freeFeatures = [
   'Basic document collaboration',
@@ -43,9 +44,10 @@ function App() {
                 projects. Officelite is the new collaboration platform built
                 with an intuitive interface to improve productivity.
               </p>
-              <button className="btn btn--hero hero__btn" type="button">
-                Get started
-              </button>
+              <Button
+                description="Get started"
+                btnClass="btn--primary hero__btn"
+              />
             </div>
             {/* <img className="hero__bg-pattern" src={bgPatternHeader} alt="" /> */}
           </div>
