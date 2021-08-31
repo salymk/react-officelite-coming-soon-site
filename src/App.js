@@ -29,9 +29,10 @@ function App() {
   return (
     <>
       <Header />
-      <div className="hero__image">
+      <div className="hero__image--mobile">
         <img src={ChartsSVG} alt="Stat charts" />
       </div>
+      <img src={bgPatternHeader} alt="" />
       <main>
         <section className="hero">
           <div className="container">
@@ -46,6 +47,9 @@ function App() {
                 description="Get started"
                 btnClass="btn--primary hero__btn"
               />
+            </div>
+            <div className="hero__image">
+              <img src={ChartsSVG} alt="Stat charts" />
             </div>
           </div>
         </section>
