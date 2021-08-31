@@ -90,7 +90,10 @@ function App() {
           <div className="container">
             <div className="timer">
               <Countdown />
-              <button type="button">Get started</button>
+              <Button
+                description="Get started"
+                btnClass="btn--primary hero__btn"
+              />
             </div>
           </div>
         </section>
