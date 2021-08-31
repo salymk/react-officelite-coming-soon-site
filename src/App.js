@@ -32,7 +32,7 @@ function App() {
       <div className="hero__image--mobile">
         <img src={ChartsSVG} alt="Stat charts" />
       </div>
-      <img src={bgPatternHeader} alt="" />
+      <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <main>
         <section className="hero">
           <div className="container">
