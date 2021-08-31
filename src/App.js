@@ -29,14 +29,12 @@ function App() {
   return (
     <>
       <Header />
+      <div className="hero__image">
+        <img src={ChartsSVG} alt="Stat charts" />
+      </div>
       <main>
         <section className="hero">
-          <img className="hero__bg-pattern" src={bgPatternHeader} alt="" />
-
           <div className="container">
-            <div className="hero__image">
-              <img src={ChartsSVG} alt="Stat charts" />
-            </div>
             <div className="hero__content">
               <h1>A simple solution to complex tasks is coming soon</h1>
               <p>
@@ -49,7 +47,6 @@ function App() {
                 btnClass="btn--primary hero__btn"
               />
             </div>
-            {/* <img className="hero__bg-pattern" src={bgPatternHeader} alt="" /> */}
           </div>
         </section>
 
