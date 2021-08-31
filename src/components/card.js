@@ -12,7 +12,7 @@ const Card = (props) => (
     </div>
     <div className="card__features">
       {props.features?.map((feature) => (
-        <p>{feature}</p>
+        <p key={feature}>{feature}</p>
       ))}
     </div>
     <Button description={props.cta} />
