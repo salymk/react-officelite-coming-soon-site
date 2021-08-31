@@ -92,7 +92,7 @@ function App() {
               <Countdown />
               <Button
                 description="Get started"
-                btnClass="btn--primary hero__btn"
+                btnClass="btn--primary timer__btn"
               />
             </div>
           </div>

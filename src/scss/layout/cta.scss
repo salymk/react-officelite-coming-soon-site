@@ -4,5 +4,10 @@
 
     .timer {
         padding-bottom: 6rem;
+        text-align: center;
+        
+        &__btn {
+            margin-top: 2.5rem;
+        }
     }
 }
