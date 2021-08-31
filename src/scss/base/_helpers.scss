@@ -25,6 +25,12 @@
   width: 100%; /* 1 */
 }
 
+@media (min-width: $max-w-screen-md) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
 /**
  * Hide text while making it readable for screen readers
  * 1. Needed in WebKit-based browsers because of an implementation bug;
