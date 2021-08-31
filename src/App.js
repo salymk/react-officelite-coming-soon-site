@@ -35,7 +35,7 @@ function App() {
       <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <main>
         <section className="hero">
-          <div className="container">
+          <div className="container split">
             <div className="hero__content">
               <h1>A simple solution to complex tasks is coming soon</h1>
               <p>
