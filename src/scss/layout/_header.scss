@@ -18,3 +18,13 @@ header {
   header img {
     width: 155px;
   }
+
+  @media (min-width: $max-w-screen-md) {
+    header {
+      padding-bottom: 0;
+      padding: 3rem 2.5rem;
+      background-image: url('');
+      justify-content: left;
+      
+    }
+  }
