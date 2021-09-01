@@ -73,3 +73,48 @@
 
   }
 
+  .btn--tablet {
+    display: none;
+  }
+
+  @media (min-width: $max-w-screen-md) {
+    .btn--tablet {
+      display: inline-block;
+    }
+
+    .btn--mobile {
+      display: none;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 689px;
+      padding: 3rem;
+      text-align: left;
+
+      &__tier {
+        margin: 0;
+      }
+
+      &__price {
+        margin-bottom: 0;
+
+        h2 {
+          margin-top: .5rem;
+        }
+      }
+
+      .btn {
+        margin-top: 1rem;
+      }
+    }
+
+    .card--blue {
+      background-image: url(../../assets/home/bg-pattern-pricing.svg);
+      background-position: 170%;
+      background-repeat: no-repeat;
+    }
+  }
+
