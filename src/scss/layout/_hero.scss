@@ -68,6 +68,10 @@
 
         &__content {
             text-align: left;
+            padding-top: 0;
+            h1 {
+                margin-top: 0;
+            }
         }
 
         &__image--mobile {
