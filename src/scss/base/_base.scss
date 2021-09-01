@@ -53,5 +53,19 @@ h3 {
   font-size: $fs-500;
 }
 
+.bg-pattern-header {
+  display: none;
+}
+
+@media (min-width: $max-w-screen-md) {
+
+  .bg-pattern-header {
+    display: block;
+    width: 666px;
+    position: absolute;
+    top: -180px;
+    right: -306px;
+  }
+}
 
 
