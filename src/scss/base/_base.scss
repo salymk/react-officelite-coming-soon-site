@@ -22,15 +22,10 @@ html {
   box-sizing: border-box;
 }
 
-// img {
-//   width: 100%;
-// }
 
-body {
-  background-image: url(../../assets/home/bg-pattern-header.svg);
-  background-position: 408px -160px;
-  background-repeat: no-repeat;
-  background-size: 666px;
+#root {
+  position: relative;
+  overflow: hidden;
 }
 
 main {
