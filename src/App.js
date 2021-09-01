@@ -28,11 +28,11 @@ const ultimateFeatures = [
 function App() {
   return (
     <>
+      <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <Header />
       <div className="hero__image--mobile">
         <img src={ChartsSVG} alt="Stat charts" />
       </div>
-      <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <main>
         <section className="hero">
           <div className="container split">
