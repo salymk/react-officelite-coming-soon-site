@@ -12,6 +12,9 @@ header {
     background-position: 50% 95%;
     background-repeat: no-repeat;
     padding-bottom: 13rem;  
+    max-width: $max-w-6xl;
+    width: 100%;
+    margin: 0 auto;
   }
   
   header img {
