@@ -15,3 +15,13 @@
         }
     }
 }
+
+@media (min-width: $max-w-screen-md) {
+    .cta {
+        padding-top: 38rem;
+        background-image: url(../../assets/home/bg-pattern-footer.svg);
+        background-repeat: no-repeat;
+        background-position: 50% -4%;
+        background-size: 1454px;
+    }
+}
