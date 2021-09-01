@@ -68,3 +68,24 @@
     }
 }
 
+@media (min-width: $max-w-screen-lg) {
+    .hero {
+        &__content {
+            h1 {
+                font-size: $fs-700;
+            }
+
+            p {
+                font-size: $fs-300;
+                line-height: 1.6;
+            }
+        }
+
+        &__image {
+            img {
+                width: 475px;
+            }
+        }
+    }
+}
+
