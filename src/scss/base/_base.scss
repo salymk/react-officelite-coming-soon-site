@@ -68,4 +68,12 @@ h3 {
   }
 }
 
+@media (min-width: $max-w-screen-lg) {
+  .bg-pattern-header {
+    width: 1134px;
+    right: -370px;
+    top: -487px;
+  }
+}
+
 
