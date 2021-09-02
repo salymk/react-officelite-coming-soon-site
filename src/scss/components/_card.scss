@@ -118,3 +118,45 @@
     }
   }
 
+  @media (min-width: $max-w-screen-lg) {
+    .btn--tablet {
+      display: none;
+    }
+
+    .btn--mobile {
+      display: inline-block;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      max-width: 350px;
+      text-align: center;
+
+      &__tier {
+        margin-bottom: 2.5rem;
+      }
+    
+      &__price {
+          margin-bottom: 3.5rem;
+        h2 {
+          margin-bottom: 1rem;
+        }
+  
+        p {
+            margin-top: 0;
+        }
+      }
+
+      .btn {
+        margin-top: 1rem;
+      }
+    }
+
+    .card--blue {
+      background-image: url(../../assets/home/bg-pattern-pricing.svg);
+      background-position: bottom;
+    }
+
+  }
+
