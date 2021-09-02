@@ -20,3 +20,13 @@
         transform: translateY(40rem);
     }
 }
+
+@media (min-width: $max-w-screen-lg) {
+    .cards {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        transform: translateY(25rem);
+    }
+}
