@@ -22,8 +22,9 @@
             background-color: $clr-primary-dark;
             color: white;
             padding: 1rem 1.2rem;
-            border-radius: 4px;
+            border-radius: 10px;
             text-align: center;
+            margin: 0 2px;
 
             h3 {
                 font-size: $fs-500;
@@ -38,6 +39,35 @@
                 opacity: .5;
                 margin-bottom: 0;
             }
+        }
+    }
+}
+
+
+@media (min-width: $max-w-screen-md) {
+    .countdown {
+        &__title {
+            text-align: center;
+        }
+
+        &__timer {
+            .time {
+                h3 {
+                    font-size: $fs-700;
+                }
+
+                p {
+                    font-size: $fs-200;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $max-w-screen-lg) {
+    .countdown {
+        &__title {
+            text-align: left;
         }
     }
 }
