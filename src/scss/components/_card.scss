@@ -13,6 +13,7 @@
       font-size: $fs-400;
       font-weight: $fw-500;
       margin-bottom: 2.5rem;
+      margin-top: 0;
     }
   
     &__price {
@@ -93,6 +94,7 @@
       max-width: 689px;
       padding: 3rem;
       text-align: left;
+      min-height: 316px;
 
       &__tier {
         margin: 0;
@@ -103,6 +105,7 @@
 
         h2 {
           margin-top: .5rem;
+          font-size: $fs-700;
         }
       }
 
@@ -132,24 +135,22 @@
       flex-direction: column;
       max-width: 350px;
       text-align: center;
+      padding: 2rem 2rem;
+
+      &__header {
+        margin-bottom: 2rem;
+      }
 
       &__tier {
         margin-bottom: 2.5rem;
       }
-    
-      &__price {
-          margin-bottom: 3.5rem;
-        h2 {
-          margin-bottom: 1rem;
-        }
-  
-        p {
-            margin-top: 0;
-        }
+
+      &__features {
+        margin-bottom: 1rem;
       }
 
       .btn {
-        margin-top: 1rem;
+        margin-top: 0;
       }
     }
 
