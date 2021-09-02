@@ -70,6 +70,8 @@
 
 @media (min-width: $max-w-screen-lg) {
     .hero {
+        padding-bottom: 40rem;
+        
         &__content {
             h1 {
                 font-size: $fs-700;
