@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from './button';
 
 const Card = (props) => (
@@ -11,14 +12,18 @@ const Card = (props) => (
         <h2>{props.price}</h2>
         <p>{props.users}</p>
       </div>
-      <Button btnClass="btn--tablet" description={props.cta} />
+      <Link className="btn--tablet" to="/signup">
+        <Button description={props.cta} />
+      </Link>
     </div>
     <div className="card__features">
       {props.features?.map((feature) => (
         <p key={feature}>{feature}</p>
       ))}
     </div>
-    <Button btnClass="btn--mobile" description={props.cta} />
+    <Link className="btn--mobile" to="/signup">
+      <Button description={props.cta} />
+    </Link>
   </div>
 );
 

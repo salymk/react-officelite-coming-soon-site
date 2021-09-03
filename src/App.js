@@ -1,5 +1,6 @@
 // import './App.scss';
 import './scss/main.scss';
+import { Link } from 'react-router-dom';
 import Header from './components/header';
 import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
@@ -31,7 +32,9 @@ function App() {
       <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <Header />
       <div className="hero__image--mobile">
-        <img src={ChartsSVG} alt="Stat charts" />
+        <Link to="/">
+          <img src={ChartsSVG} alt="Stat charts" />
+        </Link>
       </div>
       <main>
         <section className="hero">
@@ -43,10 +46,12 @@ function App() {
                 projects. Officelite is the new collaboration platform built
                 with an intuitive interface to improve productivity.
               </p>
-              <Button
-                description="Get started"
-                btnClass="btn--primary hero__btn"
-              />
+              <Link to="/signup">
+                <Button
+                  description="Get started"
+                  btnClass="btn--primary hero__btn"
+                />
+              </Link>
             </div>
             <div className="hero__image">
               <img src={ChartsSVG} alt="Stat charts" />
@@ -91,10 +96,12 @@ function App() {
           <div className="container">
             <div className="timer">
               <Countdown />
-              <Button
-                description="Get started"
-                btnClass="btn--primary timer__btn"
-              />
+              <Link to="/signup">
+                <Button
+                  description="Get started"
+                  btnClass="btn--primary timer__btn"
+                />
+              </Link>
             </div>
           </div>
         </section>
