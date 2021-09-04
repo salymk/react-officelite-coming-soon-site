@@ -28,11 +28,13 @@
 @import
   'components/card',
   'components/button',
-  'components/countdown';
+  'components/countdown',
+  'components/form';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/signup';
 
 // 7. Themes
 @import
