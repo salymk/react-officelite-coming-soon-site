@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/shared/logo.svg';
 
 const Header = () => (
   <header>
-    <img src={logo} alt="Blue circles with officelite text" />
+    <Link to="/">
+      <img src={logo} alt="Blue circles with officelite text" />
+    </Link>
   </header>
 );
 
