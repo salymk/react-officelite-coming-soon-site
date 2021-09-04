@@ -2,13 +2,10 @@
     &__title {
         letter-spacing: 5px;
         text-transform: uppercase;
-        color: $clr-white;
         font-weight: $fw-500;
         margin-bottom: 1.125rem;
-  
-        span {
-          color: $clr-primary-blue;
-        }
+        
+        
     }
 
     &__timer {
@@ -18,8 +15,6 @@
 
         .time {
             display: inline-block;
-            background-color: $clr-primary-dark;
-            color: white;
             padding: 1rem 1.2rem;
             border-radius: 10px;
             text-align: center;
@@ -27,20 +22,66 @@
 
             h3 {
                 font-size: $fs-500;
-                font-weight: $fw-500;
+                font-weisght: $fw-500;
                 line-height: 1;
                 margin: 0;
             }
 
             p {
                 font-size: $fs-100;
-                color: $clr-white;
                 opacity: .5;
                 margin-bottom: 0;
+                font-weight: $fw-500;
             }
         }
     }
 }
+
+.countdown--dark {
+    .countdown__title {
+        color: $clr-white;
+  
+        span {
+          color: $clr-primary-blue;
+        }
+    }
+
+    .countdown__timer {
+        .time {
+            background-color: $clr-primary-dark;
+            color: white;
+
+            p {
+                color: $clr-white;
+            }
+        }
+    }
+}
+
+.countdown--light {
+    .countdown__title {
+        color: $clr-primary-dark;
+  
+        span {
+          color: $clr-primary-blue;
+        }
+    }
+
+    .countdown__timer {
+        justify-content: left;
+        .time {
+            background-color: rgba(81, 117, 255, .1);
+            color: $clr-primary-blue;
+
+            p {
+                color: $clr-primary-dark;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+
 
 @media (min-width: 350px) {
     .countdown {
