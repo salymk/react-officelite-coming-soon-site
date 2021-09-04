@@ -95,7 +95,7 @@ function App() {
         <section className="cta">
           <div className="container">
             <div className="timer">
-              <Countdown />
+              <Countdown className="countdown--dark" />
               <Link to="/signup">
                 <Button
                   description="Get started"

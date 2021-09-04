@@ -1,8 +1,10 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-const Countdown = () => (
+const Countdown = (props) => (
   <>
-    <div className="countdown">
+    <div className={`countdown ${props.className}`}>
       <p className="countdown__title">
         Coming <span>4 Nov 2020</span>
       </p>
