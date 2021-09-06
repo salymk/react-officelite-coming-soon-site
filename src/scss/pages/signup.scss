@@ -1,0 +1,29 @@
+
+.signup {
+    display: grid;
+    // grid-template-columns:1fr  minmax(150px, 25%);
+}
+
+.hero {
+    padding-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: space-between;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.bg-dark {
+    background-color: #25293A;
+    background-image: url(../../assets/sign-up/bg-pattern-side.svg);
+    background-size: 1440px;
+    background-repeat: no-repeat;
+    background-position: 50% 250%;
+}
+
+.hero__content {
+    max-width: 540px;
+}
