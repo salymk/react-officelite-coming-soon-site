@@ -1,29 +1,88 @@
 
-.signup {
-    display: grid;
-    // grid-template-columns:1fr  minmax(150px, 25%);
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
 }
 
-// .hero {
-//     padding-bottom: 5rem;
-// }
 
-.grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-items: space-between;
-    align-items: baseline;
-    justify-content: space-between;
+.signup-hero {
+    padding-bottom: 5rem;
+
+    .container {
+        position: relative;
+        transform: translateY(20rem);
+        margin-top: -30rem;
+    }
+
+    &__content {
+        text-align: center;
+
+        h1 {
+            font-size: $fs-600;
+            color: $clr-primary-dark;   
+        }
+
+        p {
+            font-size: $fs-200;
+        }
+
+        .countdown {
+            margin-top: 64px;
+        }
+    }
 }
 
 .bg-dark {
-    background-color: #25293A;
+    height: 320px;
+    background-color: $clr-secondary-dark;
     background-image: url(../../assets/sign-up/bg-pattern-side.svg);
-    background-size: 1440px;
+    background-size: 262.13px;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-position: 50% 250%;
 }
 
-.hero__content {
-    max-width: 540px;
+// .bg-dark {
+//     background-color: #25293A;
+//     background-image: url(../../assets/sign-up/bg-pattern-side.svg);
+//     background-size: 1440px;
+//     background-repeat: no-repeat;
+//     background-position: 50% 115%;
+    
+//     position: absolute;
+//     width: 28%;
+//     height: 100vh;
+//     top: 0;
+//     right: 0;
+//     z-index: -1;
+// }
+
+
+@media (min-width: $max-w-screen-lg) {
+
+    .flex {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .signup {
+        height: 100vh;
+    }
+    
+    .bg-dark {
+        background-color: #25293A;
+        background-image: url(../../assets/sign-up/bg-pattern-side.svg);
+        background-size: 1440px;
+        background-repeat: no-repeat;
+        background-position: 50% 115%;
+        
+        position: absolute;
+        width: 28%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    
 }
