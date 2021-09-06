@@ -4,11 +4,11 @@ form {
     flex-direction: column;
     gap: 2rem;
     max-width: 445px;
-    min-height: 508px;
     background-color: white;
     padding: 2.5rem;
     border-radius: 13px;
     box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.25);
+    margin-left: auto;
 }
 
 input {
@@ -33,4 +33,12 @@ select {
 
 .btn {
     margin-top: 1rem;
+}
+
+.btn--primary {
+    box-shadow: none;
+}
+
+.countdown {
+    margin-top: 2.5rem;
 }
