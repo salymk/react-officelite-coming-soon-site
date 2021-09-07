@@ -102,6 +102,10 @@
     .signup-hero__content {
         text-align: left;
 
+        p {
+            font-size: $fs-300;
+        }
+
         .countdown--light .countdown__timer {
             justify-content: left;
         }
