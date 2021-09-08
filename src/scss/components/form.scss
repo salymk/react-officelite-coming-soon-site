@@ -1,4 +1,3 @@
-
 form {
     display: flex;
     flex-direction: column;
@@ -19,16 +18,7 @@ input {
     padding-bottom: 1rem;
     padding-left: .5rem;
     mix-blend-mode: normal;
-}
-
-select {
-    border: none;
-    border-bottom: 1px solid #747B95;
-    opacity: .5;
-    padding-bottom: 1rem;
-    padding-left: .5rem;
-    mix-blend-mode: normal;
-
+    outline: none;
 }
 
 .btn {
