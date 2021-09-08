@@ -36,7 +36,7 @@
         }
 
         .countdown {
-            margin-top: 64px;
+            margin-top: 2.5rem;
         }
 
         .countdown--light .countdown__timer {
@@ -58,10 +58,6 @@
 @media (min-width: $max-w-screen-md) {
     .signup-hero__content {
         margin-top: 2.5rem;
-
-        .countdown--light .countdown__timer {
-            margin-top: 2.5rem;
-        }
     }
 
     .bg-dark {
@@ -81,6 +77,10 @@
 
     .signup {
         height: 100vh;
+
+        .container {
+            margin-top: -27rem;
+        }
     }
     
     .bg-dark {
@@ -101,6 +101,11 @@
     
     .signup-hero__content {
         text-align: left;
+        margin-top: 0;
+
+        h1 {
+            font-size: $fs-700;
+        }
 
         p {
             font-size: $fs-300;
