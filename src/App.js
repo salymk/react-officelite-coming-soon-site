@@ -49,7 +49,7 @@ function App() {
               <Link to="/signup">
                 <Button
                   description="Get started"
-                  btnClass="btn--primary hero__btn"
+                  className="btn--primary hero__btn"
                 />
               </Link>
             </div>
@@ -99,7 +99,7 @@ function App() {
               <Link to="/signup">
                 <Button
                   description="Get started"
-                  btnClass="btn--primary timer__btn"
+                  className="btn--primary timer__btn"
                 />
               </Link>
             </div>
