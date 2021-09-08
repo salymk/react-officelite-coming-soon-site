@@ -1,4 +1,3 @@
-// import './App.scss';
 import './scss/main.scss';
 import { Link } from 'react-router-dom';
 import Header from './components/header';
@@ -63,7 +62,7 @@ function App() {
           <div className="container">
             <div className="cards">
               <Card
-                cardClassName="card--light"
+                className="card--light"
                 tier="Basic"
                 price="Free"
                 users="Upto 5 users for free"
@@ -72,7 +71,7 @@ function App() {
               />
 
               <Card
-                cardClassName="card--blue"
+                className="card--blue"
                 tier="Pro"
                 price="$9.99"
                 users="Per user, billed monthly"
@@ -81,7 +80,7 @@ function App() {
               />
 
               <Card
-                cardClassName="card--light"
+                className="card--light"
                 tier="Ultimate"
                 price="$19.99"
                 users="Per user, billed monthly"
