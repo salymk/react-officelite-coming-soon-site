@@ -1,5 +1,78 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
+import Select from 'react-select';
+
+const options = [
+  {
+    value: `Basic Pack <span>Free</span>`,
+    label: 'Basic Pack Free',
+  },
+  {
+    value: 'Pro Pack $9.99',
+    label: 'Pro Pack $9.99',
+  },
+  {
+    value: 'Ultimate Pack $19.99',
+    label: 'Ultimate Pack $19.99',
+  },
+];
+
+const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    border: 'none',
+    borderBottom: `1px solid rgba(116,123,149, .25)`,
+    paddingBottom: '1rem',
+    outline: 'none',
+    focus: 'none',
+    boxShadow: 'none',
+    borderRadius: 'none',
+  }),
+  dropdownIndicator: (provided, state) => ({
+    color: 'red',
+  }),
+  indicatorSeparator: () => ({
+    display: 'none',
+  }),
+  option: (provided, state) => ({
+    ...provided,
+    borderBottom: `1px solid rgba(116,123,149, .25)`,
+    color: '#333950',
+    fontWeight: 'bold',
+    fontSize: '16px',
+    backgroundColor: 'white',
+    paddingLeft: '0',
+    padding: '1rem 0',
+    '&:hover': {
+      color: 'rgb(116,123,149)',
+    },
+    '&:active': {
+      backgroundColor: 'white',
+    },
+    '&:last-child': {
+      borderBottom: 'none',
+    },
+    color: state.isSelected ? 'red' : '#333950',
+  }),
+  singleValue: (provided, state) => ({
+    ...provided,
+    color: '#333950',
+    fontWeight: 'bold',
+    fontSize: '16px',
+  }),
+  placeholder: (provided, state) => ({
+    ...provided,
+    color: '#333950',
+    fontWeight: 'bold',
+    fontSize: '16px',
+  }),
+  menu: (provided, state) => ({
+    ...provided,
+    borderRadius: '8px',
+    padding: '0 1rem',
+    marginTop: '1rem',
+  }),
+};
 
 const Form = () => (
   <>
@@ -12,14 +85,19 @@ const Form = () => (
         Email Address
       </label>
       <input type="email" id="email" name="email" placeholder="Email Address" />
+
       <label className="visually-hidden" htmlFor="packages">
         Packages
       </label>
-      <select id="packages" name="packages">
-        <option value="basic pack">Basic Pack Free</option>
-        <option value="pro pack">Pro Pack $9.99</option>
-        <option value="ultimate pack">Ultimate Pack $19.99</option>
-      </select>
+      <Select
+        classNamePrefix="react-select"
+        options={options}
+        styles={customStyles}
+        // placeholder="Basic Pack Free"
+        defaultValue={options[0]}
+        name
+      />
+
       <label className="visually-hidden" htmlFor="phone">
         Phone Number
       </label>
