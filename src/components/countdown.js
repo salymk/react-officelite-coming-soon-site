@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Countdown = (props) => (
   <>
@@ -31,3 +31,7 @@ const Countdown = (props) => (
 );
 
 export default Countdown;
+
+Countdown.propTypes = {
+  className: PropTypes.string.isRequired,
+};
