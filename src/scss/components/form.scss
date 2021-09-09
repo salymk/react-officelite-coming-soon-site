@@ -21,6 +21,16 @@ input {
     outline: none;
 }
 
+.custom-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid rgba(116,123,149, .25); 
+  &:last-child {
+    border-bottom: none;
+  } 
+}
+
 .btn {
     margin-top: 1rem;
 }
