@@ -1,19 +1,45 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import Select from 'react-select';
+import Select, { components } from 'react-select';
+import IconCheck from '../assets/sign-up/icon-check.svg';
+
+const customOption = (props) => (
+  <div className="custom-option">
+    <components.Option {...props} />
+
+    {props.isSelected ? (
+      <img className="custom-option__img" src={IconCheck} alt="" />
+    ) : (
+      ''
+    )}
+  </div>
+);
+
+// Format option to include a custom price text
+const formatOptionLabel = ({ value, label, price }) => (
+  <div style={{ display: 'flex' }}>
+    <div>{label}</div>
+    <div style={{ marginLeft: '10px', color: '#ccc' }}>{price}</div>
+  </div>
+);
 
 const options = [
   {
-    value: `Basic Pack <span>Free</span>`,
-    label: 'Basic Pack Free',
+    value: 'Basic Pack',
+    label: 'Basic Pack',
+    price: 'Free',
   },
   {
-    value: 'Pro Pack $9.99',
-    label: 'Pro Pack $9.99',
+    value: 'Pro Pack',
+    label: 'Pro Pack',
+    price: '$9.99',
   },
   {
-    value: 'Ultimate Pack $19.99',
-    label: 'Ultimate Pack $19.99',
+    value: 'Ultimate Pack',
+    label: 'Ultimate Pack',
+    price: '$19.99',
   },
 ];
 
@@ -27,6 +53,9 @@ const customStyles = {
     focus: 'none',
     boxShadow: 'none',
     borderRadius: 'none',
+    '&:hover': {
+      borderColor: 'none',
+    },
   }),
   dropdownIndicator: (provided, state) => ({
     color: 'red',
@@ -36,7 +65,7 @@ const customStyles = {
   }),
   option: (provided, state) => ({
     ...provided,
-    borderBottom: `1px solid rgba(116,123,149, .25)`,
+    // borderBottom: `1px solid rgba(116,123,149, .25)`,
     color: '#333950',
     fontWeight: 'bold',
     fontSize: '16px',
@@ -52,7 +81,6 @@ const customStyles = {
     '&:last-child': {
       borderBottom: 'none',
     },
-    color: state.isSelected ? 'red' : '#333950',
   }),
   singleValue: (provided, state) => ({
     ...provided,
@@ -69,7 +97,7 @@ const customStyles = {
   menu: (provided, state) => ({
     ...provided,
     borderRadius: '8px',
-    padding: '0 1rem',
+    padding: '.5rem 2rem',
     marginTop: '1rem',
   }),
 };
@@ -90,8 +118,10 @@ const Form = () => (
         Packages
       </label>
       <Select
+        components={{ Option: customOption }}
         classNamePrefix="react-select"
         options={options}
+        formatOptionLabel={formatOptionLabel}
         styles={customStyles}
         // placeholder="Basic Pack Free"
         defaultValue={options[0]}
