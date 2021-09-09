@@ -123,9 +123,8 @@ const Form = () => (
         options={options}
         formatOptionLabel={formatOptionLabel}
         styles={customStyles}
-        // placeholder="Basic Pack Free"
         defaultValue={options[0]}
-        name
+        isSearchable={false}
       />
 
       <label className="visually-hidden" htmlFor="phone">
