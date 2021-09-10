@@ -4,14 +4,17 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import Select, { components } from 'react-select';
+import { useFormik } from 'formik';
 import IconCheck from '../assets/sign-up/icon-check.svg';
 import ArrowDown from '../assets/sign-up/icon-arrow-down.svg';
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+// const handleSubmit = (e) => {
+//   e.preventDefault();
 
-  console.log('Button clicked');
-};
+//   console.log('Button clicked');
+// };
+
+// react-select
 
 const customDropdownIndicator = (props) => (
   <components.DropdownIndicator {...props}>
@@ -121,50 +124,114 @@ const customStyles = {
   }),
 };
 
-const Form = () => (
-  <>
-    <form onSubmit={handleSubmit}>
-      <label className="visually-hidden" htmlFor="name">
-        Name
-      </label>
-      <input type="text" id="name" name="name" placeholder="Name" />
-      <label className="visually-hidden" htmlFor="email">
-        Email Address
-      </label>
-      <input type="email" id="email" name="email" placeholder="Email Address" />
+// Formik validation
+const validate = (values) => {
+  const errors = {};
+  if (!values.name) {
+    errors.name = 'Name is required';
+  }
 
-      <label className="visually-hidden" htmlFor="price-packages">
-        Price Packages
-      </label>
-      <Select
-        id="price-packages"
-        components={{
-          Option: customOption,
-          DropdownIndicator: customDropdownIndicator,
-        }}
-        classNamePrefix="react-select"
-        options={options}
-        formatOptionLabel={formatOptionLabel}
-        styles={customStyles}
-        defaultValue={options[0]}
-        name="Price Packages"
-        isSearchable={false}
-      />
+  if (!values.email) {
+    errors.email = 'Email is required';
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = 'Invalid email address';
+  }
 
-      <label className="visually-hidden" htmlFor="phone">
-        Phone Number
-      </label>
-      <input type="text" id="phone" name="phone" placeholder="Phone Number" />
+  return errors;
+};
 
-      <label className="visually-hidden" htmlFor="company">
-        Company
-      </label>
-      <input type="text" id="company" name="company" placeholder="Company" />
-      <button type="submit" className="btn btn--primary">
-        Get on the list
-      </button>
-    </form>
-  </>
-);
+const Form = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+    },
+    validate,
+    onSubmit: (values) => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
+  return (
+    <>
+      <form onSubmit={formik.handleSubmit}>
+        <label className="visually-hidden" htmlFor="name">
+          Name
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Name"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.name}
+        />
+        {formik.errors.name ? <span>{formik.errors.name}</span> : null}
+        <label className="visually-hidden" htmlFor="email">
+          Email Address
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.email}
+        />
+        {formik.errors.email ? <span>{formik.errors.email}</span> : null}
+
+        <label className="visually-hidden" htmlFor="price-packages">
+          Price Packages
+        </label>
+        <Select
+          id="price-packages"
+          components={{
+            Option: customOption,
+            DropdownIndicator: customDropdownIndicator,
+          }}
+          classNamePrefix="react-select"
+          options={options}
+          formatOptionLabel={formatOptionLabel}
+          styles={customStyles}
+          defaultValue={options[0]}
+          name="Price Packages"
+          isSearchable={false}
+        />
+
+        <label className="visually-hidden" htmlFor="phone">
+          Phone Number
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="text"
+          placeholder="Phone Number"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.phone}
+        />
+
+        <label className="visually-hidden" htmlFor="company">
+          Company
+        </label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          placeholder="Company"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.company}
+        />
+        <button type="submit" className="btn btn--primary">
+          Get on the list
+        </button>
+      </form>
+    </>
+  );
+};
 
 export default Form;
