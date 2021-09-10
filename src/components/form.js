@@ -32,9 +32,9 @@ const customOption = (props) => (
 );
 
 // Format option to include a custom price text
-const formatOptionLabel = ({ label, price }) => (
+const formatOptionLabel = ({ label, price, value }) => (
   <div style={{ display: 'flex' }}>
-    <div>{label}</div>
+    <div value={value}>{label}</div>
     <div style={{ marginLeft: '10px', color: '#ccc' }}>{price}</div>
   </div>
 );
