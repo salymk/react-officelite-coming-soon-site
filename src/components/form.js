@@ -4,6 +4,19 @@
 import React from 'react';
 import Select, { components } from 'react-select';
 import IconCheck from '../assets/sign-up/icon-check.svg';
+import ArrowDown from '../assets/sign-up/icon-arrow-down.svg';
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  console.log('Button clicked');
+};
+
+const customDropdownIndicator = (props) => (
+  <components.DropdownIndicator {...props}>
+    <img className="arrow-down" src={ArrowDown} alt="" />
+  </components.DropdownIndicator>
+);
 
 const customOption = (props) => (
   <div className="custom-option">
@@ -49,19 +62,21 @@ const customStyles = {
     border: 'none',
     borderBottom: `1px solid rgba(116,123,149, .25)`,
     paddingBottom: '1rem',
-    outline: 'none',
-    focus: 'none',
-    boxShadow: 'none',
+    // boxShadow: 'none',
+    // outlineColor: '#5175FF',
     borderRadius: 'none',
+    cursor: 'pointer',
     '&:hover': {
       borderColor: 'none',
     },
   }),
-  dropdownIndicator: (provided, state) => ({
-    color: 'red',
-  }),
   indicatorSeparator: () => ({
     display: 'none',
+  }),
+  dropdownIndicator: (base, state) => ({
+    ...base,
+    transition: 'all .2s ease',
+    transform: state.selectProps.menuIsOpen ? 'rotateX(180deg)' : null,
   }),
   option: (provided, state) => ({
     ...provided,
@@ -72,6 +87,7 @@ const customStyles = {
     backgroundColor: 'white',
     paddingLeft: '0',
     padding: '1rem 0',
+    cursor: 'pointer',
     '&:hover': {
       color: 'rgb(116,123,149)',
     },
@@ -104,7 +120,7 @@ const customStyles = {
 
 const Form = () => (
   <>
-    <form>
+    <form onSubmit={handleSubmit}>
       <label className="visually-hidden" htmlFor="name">
         Name
       </label>
@@ -114,16 +130,21 @@ const Form = () => (
       </label>
       <input type="email" id="email" name="email" placeholder="Email Address" />
 
-      <label className="visually-hidden" htmlFor="packages">
-        Packages
+      <label className="visually-hidden" htmlFor="price-packages">
+        Price Packages
       </label>
       <Select
-        components={{ Option: customOption }}
+        id="price-packages"
+        components={{
+          Option: customOption,
+          DropdownIndicator: customDropdownIndicator,
+        }}
         classNamePrefix="react-select"
         options={options}
         formatOptionLabel={formatOptionLabel}
         styles={customStyles}
         defaultValue={options[0]}
+        name="Price Packages"
         isSearchable={false}
       />
 
