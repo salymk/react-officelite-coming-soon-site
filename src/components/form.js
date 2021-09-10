@@ -156,32 +156,42 @@ const Form = () => {
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
-        <label className="visually-hidden" htmlFor="name">
-          Name
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Name"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.name}
-        />
-        {formik.errors.name ? <span>{formik.errors.name}</span> : null}
-        <label className="visually-hidden" htmlFor="email">
-          Email Address
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Email Address"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-        />
-        {formik.errors.email ? <span>{formik.errors.email}</span> : null}
+        <div className="input-container">
+          <label className="visually-hidden" htmlFor="name">
+            Name
+          </label>
+          <input
+            className={formik.errors.name ? 'error' : ''}
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
+          />
+          {formik.errors.name ? (
+            <span className="error-message">{formik.errors.name}</span>
+          ) : null}
+        </div>
+        <div className="input-container">
+          <label className="visually-hidden" htmlFor="email">
+            Email Address
+          </label>
+          <input
+            className={formik.errors.email ? 'error' : ''}
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Email Address"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+          />
+          {formik.errors.email ? (
+            <span className="error-message">{formik.errors.email}</span>
+          ) : null}
+        </div>
 
         <label className="visually-hidden" htmlFor="price-packages">
           Price Packages
@@ -201,31 +211,36 @@ const Form = () => {
           isSearchable={false}
         />
 
-        <label className="visually-hidden" htmlFor="phone">
-          Phone Number
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="text"
-          placeholder="Phone Number"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.phone}
-        />
+        <div className="input-container">
+          <label className="visually-hidden" htmlFor="phone">
+            Phone Number
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="text"
+            placeholder="Phone Number"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.phone}
+          />
+        </div>
 
-        <label className="visually-hidden" htmlFor="company">
-          Company
-        </label>
-        <input
-          id="company"
-          name="company"
-          type="text"
-          placeholder="Company"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.company}
-        />
+        <div className="input-container">
+          <label className="visually-hidden" htmlFor="company">
+            Company
+          </label>
+          <input
+            id="company"
+            name="company"
+            type="text"
+            placeholder="Company"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.company}
+          />
+        </div>
+
         <button type="submit" className="btn btn--primary">
           Get on the list
         </button>
