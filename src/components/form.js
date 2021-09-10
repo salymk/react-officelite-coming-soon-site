@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -31,7 +32,7 @@ const customOption = (props) => (
 );
 
 // Format option to include a custom price text
-const formatOptionLabel = ({ value, label, price }) => (
+const formatOptionLabel = ({ label, price }) => (
   <div style={{ display: 'flex' }}>
     <div>{label}</div>
     <div style={{ marginLeft: '10px', color: '#ccc' }}>{price}</div>
@@ -57,13 +58,13 @@ const options = [
 ];
 
 const customStyles = {
-  control: (provided) => ({
+  control: (provided, state) => ({
     ...provided,
-    border: 'none',
+    border: state.isSelected ? '1px solid red' : 'none',
     borderBottom: `1px solid rgba(116,123,149, .25)`,
     paddingBottom: '1rem',
-    // boxShadow: 'none',
-    // outlineColor: '#5175FF',
+    outlineColor: 'none',
+    outline: 'none',
     borderRadius: 'none',
     cursor: 'pointer',
     '&:hover': {
@@ -78,13 +79,12 @@ const customStyles = {
     transition: 'all .2s ease',
     transform: state.selectProps.menuIsOpen ? 'rotateX(180deg)' : null,
   }),
-  option: (provided, state) => ({
+  option: (provided, { data, isDisabled, isFocused, isSelected }) => ({
     ...provided,
-    // borderBottom: `1px solid rgba(116,123,149, .25)`,
-    color: '#333950',
+    color: isDisabled ? '#333950' : isFocused ? '#5175FF' : '#333950',
+    backgroundColor: 'white',
     fontWeight: 'bold',
     fontSize: '16px',
-    backgroundColor: 'white',
     paddingLeft: '0',
     padding: '1rem 0',
     cursor: 'pointer',
