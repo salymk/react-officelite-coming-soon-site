@@ -60,12 +60,15 @@ const options = [
 const customStyles = {
   control: (provided, state) => ({
     ...provided,
-    border: state.isSelected ? '1px solid red' : 'none',
-    borderBottom: `1px solid rgba(116,123,149, .25)`,
+    border: state.isFocused ? '1px solid black' : 'none',
+    borderBottom: state.isFocused
+      ? '1px solid black'
+      : '1px solid rgba(116,123,149, .25)',
     paddingBottom: '1rem',
     outlineColor: 'none',
     outline: 'none',
-    borderRadius: 'none',
+    boxShadow: 'none',
+    borderRadius: state.isFocused ? '3px' : 'none',
     cursor: 'pointer',
     '&:hover': {
       borderColor: 'none',
@@ -79,7 +82,7 @@ const customStyles = {
     transition: 'all .2s ease',
     transform: state.selectProps.menuIsOpen ? 'rotateX(180deg)' : null,
   }),
-  option: (provided, { data, isDisabled, isFocused, isSelected }) => ({
+  option: (provided, { data, isDisabled, isFocused }) => ({
     ...provided,
     color: isDisabled ? '#333950' : isFocused ? '#5175FF' : '#333950',
     backgroundColor: 'white',

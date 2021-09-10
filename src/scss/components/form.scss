@@ -11,13 +11,21 @@ form {
 }
 
 input {
-    
     border: none;
-    border-bottom: 1px solid #747B95;
-    opacity: .5;
+    border-bottom: 1px solid rgba(116,123,149, .5);
     padding-bottom: 1rem;
     padding-left: .5rem;
     mix-blend-mode: normal;
+    outline: none;
+   &:focus-visible {
+      border: 1px solid;
+      border-color: black;
+      border-radius: 3px;
+    }
+}
+
+input:-internal-autofill-selected {
+  background-color: white;
 }
 
 .custom-option {
@@ -25,7 +33,6 @@ input {
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid rgba(116,123,149, .25); 
-  outline-color: $clr-primary-blue;
   &:last-child {
     border-bottom: none;
   } 
