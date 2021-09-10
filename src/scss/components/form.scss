@@ -18,7 +18,7 @@ input {
     padding-bottom: 1rem;
     padding-left: .5rem;
     mix-blend-mode: normal;
-    outline: none;
+    outline-color: $clr-primary-blue;
 }
 
 .custom-option {
@@ -26,9 +26,14 @@ input {
   flex-direction: row;
   align-items: center;
   border-bottom: 1px solid rgba(116,123,149, .25); 
+  outline-color: $clr-primary-blue;
   &:last-child {
     border-bottom: none;
   } 
+}
+
+.arrow-down {
+  padding-right: 1rem;
 }
 
 .btn {
