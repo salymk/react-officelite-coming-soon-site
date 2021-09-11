@@ -31,8 +31,16 @@ input {
 }
 
 .input-container {
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.error-cross {
+  width: 20px;
+  position: absolute;
+  right: .5rem;
+  top: 1px;
 }
 
 .error {

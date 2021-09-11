@@ -7,6 +7,7 @@ import Select, { components } from 'react-select';
 import { useFormik } from 'formik';
 import IconCheck from '../assets/sign-up/icon-check.svg';
 import ArrowDown from '../assets/sign-up/icon-arrow-down.svg';
+import Cross from '../assets/sign-up/icon-cross.svg';
 
 // const handleSubmit = (e) => {
 //   e.preventDefault();
@@ -160,6 +161,10 @@ const Form = () => {
           <label className="visually-hidden" htmlFor="name">
             Name
           </label>
+          {formik.errors.name ? (
+            <img className="error-cross" src={Cross} alt="" />
+          ) : null}
+
           <input
             className={formik.errors.name ? 'error' : ''}
             id="name"
@@ -178,8 +183,13 @@ const Form = () => {
           <label className="visually-hidden" htmlFor="email">
             Email Address
           </label>
+          {formik.touched.email && formik.errors.email ? (
+            <img className="error-cross" src={Cross} alt="" />
+          ) : null}
           <input
-            className={formik.errors.email ? 'error' : ''}
+            className={
+              formik.touched.email && formik.errors.email ? 'error' : ''
+            }
             id="email"
             name="email"
             type="email"
@@ -188,7 +198,7 @@ const Form = () => {
             onBlur={formik.handleBlur}
             value={formik.values.email}
           />
-          {formik.errors.email ? (
+          {formik.touched.email && formik.errors.email ? (
             <span className="error-message">{formik.errors.email}</span>
           ) : null}
         </div>
@@ -215,7 +225,13 @@ const Form = () => {
           <label className="visually-hidden" htmlFor="phone">
             Phone Number
           </label>
+          {formik.touched.phone && formik.errors.phone ? (
+            <img className="error-cross" src={Cross} alt="" />
+          ) : null}
           <input
+            className={
+              formik.touched.phone && formik.errors.phone ? 'error' : ''
+            }
             id="phone"
             name="phone"
             type="text"
@@ -224,6 +240,9 @@ const Form = () => {
             onBlur={formik.handleBlur}
             value={formik.values.phone}
           />
+          {formik.touched.phone && formik.errors.phone ? (
+            <span className="error-message">{formik.errors.phone}</span>
+          ) : null}
         </div>
 
         <div className="input-container">
