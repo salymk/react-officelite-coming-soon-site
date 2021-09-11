@@ -5,15 +5,10 @@
 import React from 'react';
 import Select, { components } from 'react-select';
 import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import IconCheck from '../assets/sign-up/icon-check.svg';
 import ArrowDown from '../assets/sign-up/icon-arrow-down.svg';
 import Cross from '../assets/sign-up/icon-cross.svg';
-
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-
-//   console.log('Button clicked');
-// };
 
 // react-select
 
@@ -43,6 +38,7 @@ const formatOptionLabel = ({ label, price, value }) => (
   </div>
 );
 
+// react-select options array
 const options = [
   {
     value: 'Basic Pack',
@@ -61,6 +57,7 @@ const options = [
   },
 ];
 
+// react-select custom styles
 const customStyles = {
   control: (provided, state) => ({
     ...provided,
@@ -125,21 +122,18 @@ const customStyles = {
   }),
 };
 
-// Formik validation
-const validate = (values) => {
-  const errors = {};
-  if (!values.name) {
-    errors.name = 'Name is required';
-  }
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-  if (!values.email) {
-    errors.email = 'Email is required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
-  }
-
-  return errors;
-};
+// Yup validation schema
+const validationSchema = Yup.object({
+  name: Yup.string().required('Name is required!'),
+  email: Yup.string()
+    .email('Invalid email address!')
+    .required('Email is required!'),
+  phone: Yup.string().matches(phoneRegExp, 'Phone number is invalid!'),
+  company: Yup.string(),
+});
 
 const Form = () => {
   const formik = useFormik({
@@ -149,7 +143,7 @@ const Form = () => {
       phone: '',
       company: '',
     },
-    validate,
+    validationSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
@@ -157,6 +151,7 @@ const Form = () => {
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
+        {/* Name input */}
         <div className="input-container">
           <label className="visually-hidden" htmlFor="name">
             Name
@@ -179,6 +174,8 @@ const Form = () => {
             <span className="error-message">{formik.errors.name}</span>
           ) : null}
         </div>
+
+        {/* Email input */}
         <div className="input-container">
           <label className="visually-hidden" htmlFor="email">
             Email Address
@@ -203,6 +200,7 @@ const Form = () => {
           ) : null}
         </div>
 
+        {/* Select packages */}
         <label className="visually-hidden" htmlFor="price-packages">
           Price Packages
         </label>
@@ -221,6 +219,7 @@ const Form = () => {
           isSearchable={false}
         />
 
+        {/* Phone input */}
         <div className="input-container">
           <label className="visually-hidden" htmlFor="phone">
             Phone Number
@@ -234,7 +233,7 @@ const Form = () => {
             }
             id="phone"
             name="phone"
-            type="text"
+            type="tel"
             placeholder="Phone Number"
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -245,6 +244,7 @@ const Form = () => {
           ) : null}
         </div>
 
+        {/* Company input */}
         <div className="input-container">
           <label className="visually-hidden" htmlFor="company">
             Company
