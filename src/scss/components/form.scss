@@ -24,6 +24,28 @@ input {
     }
 }
 
+::placeholder {
+  color: $clr-gray;
+  opacity: .5;
+  mix-blend-mode: normal;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: $clr-red;
+  border-bottom: 1px solid $clr-red;
+}
+
+.error-message {
+  margin-top: .5rem;
+  margin-left: .5rem;
+  color: $clr-red;
+}
+
 input:-internal-autofill-selected {
   background-color: white;
 }
