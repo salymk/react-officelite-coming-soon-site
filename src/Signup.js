@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/header';
 import Countdown from './components/countdown';
-import Form from './components/form';
+import SignupForm from './components/form';
 import './scss/main.scss';
 
 const Signup = () => (
@@ -19,7 +19,7 @@ const Signup = () => (
             </p>
             <Countdown className="countdown--light" />
           </div>
-          <Form />
+          <SignupForm />
         </div>
       </div>
       <div className="bg-dark" />
