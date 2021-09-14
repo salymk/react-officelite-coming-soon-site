@@ -49,7 +49,7 @@ const SignupForm = () => (
         email: '',
         phone: '',
         company: '',
-        package: options[0],
+        package: 'Basic Pack',
       }}
       onSubmit={(values) => {
         alert(JSON.stringify(values, null, 2));
@@ -106,27 +106,15 @@ const SignupForm = () => (
         </Field>
 
         {/* Select packages */}
-        <label className="visually-hidden" htmlFor="price-packages">
+        <label className="visually-hidden" htmlFor="package">
           Price Packages
         </label>
-        {/* <Select
-          id="price-packages"
-          components={{
-            Option: customOption,
-            DropdownIndicator: customDropdownIndicator,
-          }}
-          classNamePrefix="react-select"
-          options={options}
-          formatOptionLabel={formatOptionLabel}
-          styles={customStyles}
+        <Field
+          component={SelectField}
+          name="package"
           defaultValue={options[0]}
-          name="Price Packages"
-          isSearchable={false}
-          value={formik.values.package}
-          onChange={formik.handleChange}
-        /> */}
-
-        {/* <Field as={SelectField} options={options} defaultValue={options[0]} /> */}
+          options={options}
+        />
 
         {/* Phone input */}
         <Field name="phone">
