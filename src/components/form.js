@@ -51,8 +51,9 @@ const SignupForm = () => (
         company: '',
         package: 'Basic Pack',
       }}
-      onSubmit={(values) => {
+      onSubmit={(values, onSubmitProps) => {
         alert(JSON.stringify(values, null, 2));
+        onSubmitProps.resetForm();
       }}
       validationSchema={validationSchema}
     >
