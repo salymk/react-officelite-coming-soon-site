@@ -65,18 +65,18 @@ const SignupForm = () => (
               <label className="visually-hidden" htmlFor="name">
                 Name
               </label>
-              {form.errors.name ? (
+              {meta.touched && meta.error ? (
                 <img className="error-cross" src={Cross} alt="" />
               ) : null}
               <input
                 type="text"
                 placeholder="Name"
                 id="name"
-                className={form.errors.name ? 'error' : ''}
+                className={meta.touched && meta.error ? 'error' : ''}
                 {...field}
               />
-              {form.errors.name ? (
-                <span className="error-message">{form.errors.name}</span>
+              {meta.touched && meta.error ? (
+                <span className="error-message">{meta.error}</span>
               ) : null}
             </div>
           )}
@@ -89,18 +89,18 @@ const SignupForm = () => (
               <label className="visually-hidden" htmlFor="email">
                 Email Address
               </label>
-              {form.errors.email ? (
+              {meta.touched && meta.error ? (
                 <img className="error-cross" src={Cross} alt="" />
               ) : null}
               <input
                 type="email"
                 placeholder="Email Address"
                 id="email"
-                className={form.errors.email ? 'error' : ''}
+                className={meta.touched && meta.error ? 'error' : ''}
                 {...field}
               />
-              {form.errors.email ? (
-                <span className="error-message">{form.errors.email}</span>
+              {meta.touched && meta.error ? (
+                <span className="error-message">{meta.error}</span>
               ) : null}
             </div>
           )}
@@ -124,18 +124,18 @@ const SignupForm = () => (
               <label className="visually-hidden" htmlFor="phone">
                 Phone
               </label>
-              {form.errors.phone ? (
+              {meta.touched && meta.error ? (
                 <img className="error-cross" src={Cross} alt="" />
               ) : null}
               <input
                 type="tel"
                 placeholder="Phone"
                 id="phone"
-                className={form.errors.phone ? 'error' : ''}
+                className={meta.touched && meta.error ? 'error' : ''}
                 {...field}
               />
-              {form.errors.phone ? (
-                <span className="error-message">{form.errors.phone}</span>
+              {meta.touched && meta.error ? (
+                <span className="error-message">{meta.error}</span>
               ) : null}
             </div>
           )}
