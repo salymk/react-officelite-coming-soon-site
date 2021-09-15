@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from './components/header';
 import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
-import Countdown from './components/countdown';
+import CountdownTimer from './components/countdown';
 import Card from './components/card';
 import Button from './components/button';
 
@@ -94,7 +94,7 @@ function App() {
         <section className="cta">
           <div className="container">
             <div className="timer">
-              <Countdown className="countdown--dark" />
+              <CountdownTimer className="countdown--dark" />
               <Link to="/signup">
                 <Button
                   description="Get started"

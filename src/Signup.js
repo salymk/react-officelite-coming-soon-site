@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/header';
-import Countdown from './components/countdown';
+import CountdownTimer from './components/countdown';
 import SignupForm from './components/form';
 import './scss/main.scss';
 
@@ -17,7 +17,7 @@ const Signup = () => (
               perks available only to early subscribers. We are moving into
               final development and getting ready for official launch soon.
             </p>
-            <Countdown className="countdown--light" />
+            <CountdownTimer className="countdown--light" />
           </div>
           <SignupForm />
         </div>
