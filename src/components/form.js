@@ -3,7 +3,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import Cross from '../assets/sign-up/icon-cross.svg';
 import SelectField from './SelectField';
@@ -60,7 +60,7 @@ const SignupForm = () => (
       <Form>
         {/* Name input */}
         <Field name="name">
-          {({ field, form, meta }) => (
+          {({ field, meta }) => (
             <div className="input-container">
               <label className="visually-hidden" htmlFor="name">
                 Name
@@ -84,7 +84,7 @@ const SignupForm = () => (
 
         {/* Email input */}
         <Field name="email">
-          {({ field, form, meta }) => (
+          {({ field, meta }) => (
             <div className="input-container">
               <label className="visually-hidden" htmlFor="email">
                 Email Address
@@ -119,7 +119,7 @@ const SignupForm = () => (
 
         {/* Phone input */}
         <Field name="phone">
-          {({ field, form, meta }) => (
+          {({ field, meta }) => (
             <div className="input-container">
               <label className="visually-hidden" htmlFor="phone">
                 Phone
@@ -143,7 +143,7 @@ const SignupForm = () => (
 
         {/* Company input */}
         <Field name="company">
-          {({ field, form, meta }) => (
+          {({ field }) => (
             <div className="input-container">
               <label className="visually-hidden" htmlFor="company">
                 Company

@@ -60,7 +60,7 @@ const customStyles = {
     transition: 'all .2s ease',
     transform: state.selectProps.menuIsOpen ? 'rotateX(180deg)' : null,
   }),
-  option: (provided, { data, isDisabled, isFocused }) => ({
+  option: (provided, { isDisabled, isFocused }) => ({
     ...provided,
     color: isDisabled ? '#333950' : isFocused ? '#5175FF' : '#333950',
     backgroundColor: 'white',
@@ -79,19 +79,19 @@ const customStyles = {
       borderBottom: 'none',
     },
   }),
-  singleValue: (provided, state) => ({
+  singleValue: (provided) => ({
     ...provided,
     color: '#333950',
     fontWeight: 'bold',
     fontSize: '16px',
   }),
-  placeholder: (provided, state) => ({
+  placeholder: (provided) => ({
     ...provided,
     color: '#333950',
     fontWeight: 'bold',
     fontSize: '16px',
   }),
-  menu: (provided, state) => ({
+  menu: (provided) => ({
     ...provided,
     borderRadius: '8px',
     padding: '.5rem 2rem',
