@@ -9,7 +9,7 @@ const LazySignup = React.lazy(() => import('./Signup'));
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <React.Suspense fallback="Loading...">
+      <React.Suspense fallback="">
         <Switch>
           <Route exact path="/" component={LazyApp} />
           <Route path="/signup" component={LazySignup} />
