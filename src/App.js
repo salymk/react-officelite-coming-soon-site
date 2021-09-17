@@ -32,7 +32,7 @@ function App() {
       <Header />
       <div className="hero__image--mobile">
         <Link to="/">
-          <img src={ChartsSVG} alt="Stat charts" />
+          <img src={ChartsSVG} alt="" />
         </Link>
       </div>
       <main>
