@@ -4,8 +4,8 @@ import logo from '../assets/shared/logo.svg';
 
 const Header = () => (
   <header>
-    <Link to="/">
-      <img src={logo} alt="Blue circles with officelite text" />
+    <Link to="/" aria-label="Takes you to the home page">
+      <img src={logo} alt="Logo with Blue circles that has officelite text" />
     </Link>
   </header>
 );
