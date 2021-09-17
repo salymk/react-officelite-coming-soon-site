@@ -76,7 +76,9 @@ const SignupForm = () => (
                 {...field}
               />
               {meta.touched && meta.error ? (
-                <span className="error-message">{meta.error}</span>
+                <span aria-live="polite" className="error-message">
+                  {meta.error}
+                </span>
               ) : null}
             </div>
           )}
@@ -100,7 +102,9 @@ const SignupForm = () => (
                 {...field}
               />
               {meta.touched && meta.error ? (
-                <span className="error-message">{meta.error}</span>
+                <span aria-live="polite" className="error-message">
+                  {meta.error}
+                </span>
               ) : null}
             </div>
           )}
@@ -111,6 +115,7 @@ const SignupForm = () => (
           Price Packages
         </label>
         <Field
+          id="package"
           component={SelectField}
           name="package"
           defaultValue={options[0]}
@@ -135,7 +140,9 @@ const SignupForm = () => (
                 {...field}
               />
               {meta.touched && meta.error ? (
-                <span className="error-message">{meta.error}</span>
+                <span aria-live="polite" className="error-message">
+                  {meta.error}
+                </span>
               ) : null}
             </div>
           )}
