@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Header from './components/header';
 import CountdownTimer from './components/countdown';
 import SignupForm from './components/form';
@@ -6,6 +7,12 @@ import './scss/main.scss';
 
 const Signup = () => (
   <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Signup - Officelite coming soon site</title>
+      <meta name="Signup - Officelite coming soon site" />
+      <meta name="theme-color" content="#fff" />
+    </Helmet>
     <main className="signup">
       <div className="signup-hero">
         <Header />

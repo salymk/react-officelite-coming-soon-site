@@ -1,5 +1,6 @@
 import './scss/main.scss';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Header from './components/header';
 import ChartsSVG from './assets/home/illustration-charts.svg';
 import bgPatternHeader from './assets/home/bg-pattern-header.svg';
@@ -28,6 +29,12 @@ const ultimateFeatures = [
 function App() {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Officelite coming soon site</title>
+        <meta name="Officelite coming soon site" />
+        <meta name="theme-color" content="#fff" />
+      </Helmet>
       <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <Header />
       <div className="hero__image--mobile">
