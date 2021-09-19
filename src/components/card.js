@@ -17,9 +17,11 @@ const Card = (props) => (
       </Link>
     </div>
     <div className="card__features">
-      {props.features?.map((feature) => (
-        <p key={feature}>{feature}</p>
-      ))}
+      <ul>
+        {props.features?.map((feature) => (
+          <li key={feature}>{feature}</li>
+        ))}
+      </ul>
     </div>
     <Link className="btn--mobile" to="/signup">
       <Button description={props.cta} />
