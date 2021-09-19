@@ -7,9 +7,9 @@ import Button from './button';
 const Card = (props) => (
   <div className={`card ${props.className}`}>
     <div className="card__header">
-      <p className="card__tier">{props.tier}</p>
+      <h2 className="card__tier">{props.tier}</h2>
       <div className="card__price">
-        <h2>{props.price}</h2>
+        <h3>{props.price}</h3>
         <p>{props.users}</p>
       </div>
       <Link className="btn--tablet" to="/signup">

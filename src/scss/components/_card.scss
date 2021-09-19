@@ -18,7 +18,7 @@
   
     &__price {
         margin-bottom: 3.5rem;
-      h2 {
+      h3 {
         font-size: $fs-700;
         margin-bottom: 1rem;
       }
@@ -52,7 +52,7 @@
       background-position: bottom;
 
       .card__price {
-          h2 {
+          h3 {
               color: $clr-white;
           }
       }
@@ -103,7 +103,7 @@
       &__price {
         margin-bottom: 0;
 
-        h2 {
+        h3 {
           margin-top: .5rem;
           font-size: $fs-700;
         }
