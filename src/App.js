@@ -35,7 +35,6 @@ function App() {
         <meta name="Officelite coming soon site" />
         <meta name="theme-color" content="#fff" />
       </Helmet>
-      <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
       <Header />
       <div className="hero__image--mobile">
         <Link to="/">
@@ -43,6 +42,8 @@ function App() {
         </Link>
       </div>
       <main>
+        <img className="bg-pattern-header" src={bgPatternHeader} alt="" />
+
         <section className="hero">
           <div className="container split">
             <div className="hero__content">
