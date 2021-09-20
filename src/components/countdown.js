@@ -25,20 +25,20 @@ const CountdownTimer = (props) => {
             </p>
             <div className="countdown__timer">
               <div className="time">
-                <h3>{days}</h3>
-                <p>days</p>
+                <p className="time__number">{days}</p>
+                <p className="time__title">days</p>
               </div>
               <div className="time">
-                <h3>{hours}</h3>
-                <p>hours</p>
+                <p className="time__number">{hours}</p>
+                <p className="time__title">hours</p>
               </div>
               <div className="time">
-                <h3>{minutes}</h3>
-                <p>min</p>
+                <p className="time__number">{minutes}</p>
+                <p className="time__title">min</p>
               </div>
               <div className="time">
-                <h3>{seconds}</h3>
-                <p>secs</p>
+                <p className="time__number">{seconds}</p>
+                <p className="time__title">secs</p>
               </div>
             </div>
           </div>

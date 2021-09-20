@@ -20,14 +20,14 @@
             text-align: center;
             margin: 0 2px;
 
-            h3 {
+            &__number {
                 font-size: $fs-500;
-                font-weisght: $fw-500;
+                font-weight: $fw-500;
                 line-height: 1;
                 margin: 0;
             }
 
-            p {
+            &__title {
                 font-size: $fs-100;
                 opacity: .5;
                 margin-bottom: 0;
@@ -51,7 +51,7 @@
             background-color: $clr-primary-dark;
             color: white;
 
-            p {
+            &__title {
                 color: $clr-white;
             }
         }
@@ -73,7 +73,7 @@
             background-color: rgba(81, 117, 255, .1);
             color: $clr-primary-blue;
 
-            p {
+            &__title {
                 color: $clr-primary-dark;
                 opacity: 0.5;
             }
@@ -100,11 +100,11 @@
 
         &__timer {
             .time {
-                h3 {
+                &__number {
                     font-size: $fs-700;
                 }
 
-                p {
+                &__title {
                     font-size: $fs-200;
                 }
             }
