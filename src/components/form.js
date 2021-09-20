@@ -165,7 +165,11 @@ const SignupForm = () => (
           )}
         </Field>
 
-        <button type="submit" className="btn btn--primary">
+        <button
+          type="submit"
+          className="btn btn--primary"
+          aria-label="Submit form"
+        >
           Get on the list
         </button>
       </Form>
