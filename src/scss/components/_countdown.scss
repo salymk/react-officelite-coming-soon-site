@@ -19,6 +19,7 @@
             border-radius: 10px;
             text-align: center;
             margin: 0 2px;
+            width: 72px;
 
             &__number {
                 font-size: $fs-500;
@@ -100,6 +101,7 @@
 
         &__timer {
             .time {
+                width: 100px;
                 &__number {
                     font-size: $fs-700;
                 }
