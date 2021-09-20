@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/reactjs-and-scss-office-lite-coming-soon-site-7qjD_gb1h)
 - Live Site URL: [react-officelite-coming-soon-site.vercel.app/](https://react-officelite-coming-soon-site.vercel.app/)
 
 ## My process
